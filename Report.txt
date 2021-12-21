@@ -1,0 +1,22 @@
+Report on the Neural Network Model
+
+Overview:
+The purpose of the analysis was to look into past charity funding data and write an algorithm that will attempt to predict whether or not applicants will be successful. Alphabet soup's business team provided me with a csv document that contained information of more than 34,000 organizations that received funding from Alphabet Soup. 
+
+Results:
+Data Preprocessing
+The Target Variable for the model is the “Is Successful” data.
+The Featured Variables were all Variables except the “EIN”, “Name”, and “Is Successful” data. 
+The “EIN” and “Name” were removed as variables for both the Target and Featured Variables. 
+Compiling, Training, and Evaluating the Model
+I selected to use 3 layers with the first layer containing 8 neurons and the second and third layer containing 5 neurons. I used the activation function “relu” for the hidden layers, while using “sigmoid” for the output layer. My first attempt with running the algorithm I was only using two hidden layers (the first and the second) with no change to the neurons. I added the third layer after testing the accuracy and seeing a small bump in accuracy. 
+The Original performance of the algorithm came in at an accuracy of 72.65%. The peak performance that I achieved was with adjusting the Bin Values from 800 and 1000 to 1000 and 1200. This gave a small bump in accuracy resulting in the algorithm being 72.72% accurate. 
+After the 3 trials (adjusting bin value, adjusting hidden layers, and adding Epochs) the final optimization is going to include adjusting the bin value and adjusting the hidden layers since those two increased the accuracy. 
+Summary:
+Results: 
+Original: Accuracy of .7265 
+Trial #1 Adding More Hidden Layers: Accuracy of .7266 
+Trial #2 Adjusting Bin Value: Accuracy of .7272
+Trial #3 Increasing Epochs: Accuracy of .7231
+Final Optimization Attempt: Loss of .5571 and Accuracy of .7246
+The Final Optimization attempt proved to be less accurate than adjusting the Bin Value Alone. The recommendation based on these very limited tests would be to adjust the Bin Value. From there more tests could be run to attempt to increase the accuracy, including, attempting the previous tests to fine tune the hidden layers and epochs, adjusting the bin levels further, dropping columns that may not be needed, and adjusting the activation functions. 
